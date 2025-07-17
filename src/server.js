@@ -33,7 +33,7 @@ app.use("/api/", limiter);
 // CORS configuration
 app.use(
   cors({
-    origin: process.env.CORS_ORIGIN || "localhost:3000",
+    origin: 'https://velora-dashboard-main.vercel.app',
     credentials: true,
   })
 );
