@@ -38,11 +38,11 @@ app.use("/api/", limiter);
 //   })
 // );
 
-//changed order of cors configuration
+//changed order of cors configuration // in order to allow multiple origins
 app.use(
   cors({
     origin: [
-      "https://dashboard.veloramobitech.systems/",
+      "https://dashboard.veloramobitech.systems",
       "https://velora-dashboard-main.vercel.app",
       "http://localhost:3000",
     ],
