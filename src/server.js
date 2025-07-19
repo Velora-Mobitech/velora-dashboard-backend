@@ -38,6 +38,7 @@ app.use("/api/", limiter);
 //   })
 // );
 
+//changed order of cors configuration
 app.use(
   cors({
     origin: [
