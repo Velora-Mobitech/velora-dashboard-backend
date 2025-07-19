@@ -41,9 +41,9 @@ app.use("/api/", limiter);
 app.use(
   cors({
     origin: [
+      "https://dashboard.veloramobitech.systems/",
       "https://velora-dashboard-main.vercel.app",
       "http://localhost:3000",
-      "https://dashboard.veloramobitech.systems/",
     ],
     credentials: true,
   })
