@@ -40,11 +40,14 @@ app.use("/api/", limiter);
 
 app.use(
   cors({
-    origin: ['https://velora-dashboard-main.vercel.app', 'http://localhost:3000'],
+    origin: [
+      "https://velora-dashboard-main.vercel.app",
+      "http://localhost:3000",
+      "https://dashboard.veloramobitech.systems/",
+    ],
     credentials: true,
   })
 );
-
 
 // Body parsing middleware
 app.use(express.json({ limit: "10mb" }));
