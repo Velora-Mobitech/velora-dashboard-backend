@@ -31,12 +31,20 @@ const limiter = rateLimit({
 app.use("/api/", limiter);
 
 // CORS configuration
+// app.use(
+//   cors({
+//     origin: 'https://velora-dashboard-main.vercel.app',
+//     credentials: true,
+//   })
+// );
+
 app.use(
   cors({
-    origin: 'https://velora-dashboard-main.vercel.app',
+    origin: ['https://velora-dashboard-main.vercel.app', 'http://localhost:3000'],
     credentials: true,
   })
 );
+
 
 // Body parsing middleware
 app.use(express.json({ limit: "10mb" }));
